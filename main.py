@@ -90,6 +90,103 @@ def read_fasta(filename):
 
     return header, sequence
 
+codon_table = {
+    # Phenylalanine
+    "TTT": "F", "TTC": "F",
+
+    # Leucine
+    "TTA": "L", "TTG": "L",
+    "CTT": "L", "CTC": "L",
+    "CTA": "L", "CTG": "L",
+
+    # Isoleucine
+    "ATT": "I", "ATC": "I", "ATA": "I",
+
+    # Methionine (Start)
+    "ATG": "M",
+
+    # Valine
+    "GTT": "V", "GTC": "V",
+    "GTA": "V", "GTG": "V",
+
+    # Serine
+    "TCT": "S", "TCC": "S",
+    "TCA": "S", "TCG": "S",
+    "AGT": "S", "AGC": "S",
+
+    # Proline
+    "CCT": "P", "CCC": "P",
+    "CCA": "P", "CCG": "P",
+
+    # Threonine
+    "ACT": "T", "ACC": "T",
+    "ACA": "T", "ACG": "T",
+
+    # Alanine
+    "GCT": "A", "GCC": "A",
+    "GCA": "A", "GCG": "A",
+
+    # Tyrosine
+    "TAT": "Y", "TAC": "Y",
+
+    # Histidine
+    "CAT": "H", "CAC": "H",
+
+    # Glutamine
+    "CAA": "Q", "CAG": "Q",
+
+    # Asparagine
+    "AAT": "N", "AAC": "N",
+
+    # Lysine
+    "AAA": "K", "AAG": "K",
+
+    # Aspartic Acid
+    "GAT": "D", "GAC": "D",
+
+    # Glutamic Acid
+    "GAA": "E", "GAG": "E",
+
+    # Cysteine
+    "TGT": "C", "TGC": "C",
+
+    # Tryptophan
+    "TGG": "W",
+
+    # Arginine
+    "CGT": "R", "CGC": "R",
+    "CGA": "R", "CGG": "R",
+    "AGA": "R", "AGG": "R",
+
+    # Glycine
+    "GGT": "G", "GGC": "G",
+    "GGA": "G", "GGG": "G",
+
+    # Stop Codons
+    "TAA": "STOP",
+    "TAG": "STOP",
+    "TGA": "STOP"
+} 
+
+def translate_dna(dna):
+    protein = ""
+    for i in range (0, len(dna), 3):
+        codon = dna[i:i+3]
+
+        if len(codon) < 3:
+            print(f"Warning: Incomplete codon '{codon}' ignored.")
+            break
+        amino_acid = codon_table.get(codon)
+        if amino_acid is None:
+            print("Unkown codon:", codon)
+            break
+
+        if amino_acid == "STOP":
+            break
+
+        protein += amino_acid
+    return protein
+
 
 def show_menu():
 
@@ -100,8 +197,9 @@ def show_menu():
     print("2. Reverse Complement")
     print("3. GC Content")
     print("4. RNA Transcription")
-    print("5. Load DNA from FASTA File")
-    print("6. Exit")
+    print("5. DNA Translation")
+    print("6. Load DNA from FASTA File")
+    print("7. Exit")
 
 
 while True:
@@ -110,16 +208,16 @@ while True:
 
     choice = input("Choose an option: ")
 
-    if choice == "6":
+    if choice == "7":
         print("Goodbye!")
         break
 
-    if choice not in ("1", "2", "3", "4", "5"):
+    if choice not in ("1", "2", "3", "4", "5", "6", "7"):
         print("Invalid Choice")
         continue
 
     # ---------- FASTA ----------
-    if choice == "5":
+    if choice == "6":
 
         filename = input("Enter FASTA filename: ")
 
@@ -158,6 +256,9 @@ while True:
 
     elif choice == "4":
         print(f"RNA Sequence: {transcribe_rna(dna)}")
+
+    elif choice == "5":
+        print("Protein:", translate_dna(dna))
 
 
 print("Program Ended")

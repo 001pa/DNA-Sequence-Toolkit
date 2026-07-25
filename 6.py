@@ -1,40 +1,18 @@
-# def welcome(name):
+def translate_dna(dna):
+    protein = ""
+    for i in range (0, len(dna), 3):
+        codon = dna[i:i+3]
 
-#     print("======================")
-#     print(" DNA Sequence Toolkit ")
-#     print("======================")
-#     print(f"Welcome, {name}!")
+        if len(codon) < 3:
+            print(f"Warning: Incomplete codon '{codon}' ignored.")
+            break
+        amino_acid = codon_table.get(codon)
+        if amino_acid is None:
+            print("Unkown codon:", codon)
+            break
 
-# welcome("Parth")
-# welcome("Bioinformatics Student")
+        if amino_acid == "STOP":
+            break
 
-
-
-
-
-# def greet(name):
-#     print(f"Hello {name}")
-
-# greet("Parth")
-# print("Learning Python")
-# greet("Bioinformatics")
-
-
-
-# def square(number):
-#     return number * number
-
-# result = square(6)
-
-# print(result)
-
-
-
-# def multiply(a, b):
-#     return a * b
-
-# x = multiply(4, 5)
-
-# print(x)
-# print(x + 10)
-# print(multiply(2, 3))
+        protein += amino_acid
+    return protein
