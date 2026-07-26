@@ -1,19 +1,27 @@
-# 🧬 DNA Sequence Toolkit
+# 🧬 DNA Toolkit v1.0
 
-My first Bioinformatics project built using Python.
+A Python-based Bioinformatics toolkit for performing fundamental DNA sequence analysis. This project was built as part of my journey to become a Bioinformatics & AI Engineer.
 
-## 📌 Project Description
+----------------------------------------------
 
-This program performs basic DNA sequence analysis.
+## 📖 Overview
 
-### Features
+DNA Toolkit is a command-line application that allows users to perform common DNA sequence analyses, including validation, reverse complement generation, GC content calculation, RNA transcription, protein translation, and FASTA file processing.
 
-- Count Adenine (A)
-- Count Thymine (T)
-- Count Guanine (G)
-- Count Cytosine (C)
-- Accept DNA sequence from user
-- Convert input to uppercase
+----------------------------------------------
+
+## ✨ Features
+
+- ✅ Validate DNA sequences
+- 🔄 Generate Reverse Complement
+- 📊 Calculate GC Content
+- 🧬 Transcribe DNA to RNA
+- 🧪 Translate DNA into Protein Sequence
+- 📂 Read DNA sequences from FASTA files
+- ⚠️ Handle invalid DNA sequences and unknown codons gracefully
+- 🖥️ Interactive command-line menu
+
+----------------------------------------------
 
 ## 🛠️ Technologies Used
 
@@ -22,44 +30,112 @@ This program performs basic DNA sequence analysis.
 - Git
 - GitHub
 
+----------------------------------------------
+
+## 📁 Project Structure
+
+```
+DNA-Toolkit/
+│
+├── dna_toolkit.py
+├── sample.fasta
+├── test_fasta.py
+└── README.md
+```
+
+
 ## 🚀 How to Run
 
-1. Clone the repository.
-2. Open the project folder.
-3. Run:
+----------------------------------------------
+
+### Clone the repository
+
+```bash
+git clone https://github.com/001pa/DNA-Sequence-Toolkit
+```
+
+### Move into the project directory
+
+```bash
+cd DNA-Toolkit
+```
+
+### Run the program
 
 ```bash
 python main.py
 ```
 
+----------------------------------------------
+
 ## 📷 Example
 
-Input:
+==============================
+       DNA TOOLKIT
+==============================
+1. Validate DNA
+2. Reverse Complement
+3. GC Content
+4. RNA Transcription
+5. DNA Translation
+6. Load DNA from FASTA File
+7. Exit
 
-```
-ATGCGTAA
-```
+
+Example:
+
+
+Enter DNA Sequence:
+ATGGCTTTCTAA
+
 
 Output:
 
-```
-A = 3
-T = 2
-G = 2
-C = 1
-```
 
-## 📚 Learning Goals
+Protein: MAF
 
-This project was created to learn:
 
-- Python Basics
+----------------------------------------------
+
+## 📚 Concepts Practiced
+
+### Python
+
+- Functions
 - Loops
-- Conditions
-- Strings
-- Bioinformatics Programming
+- Dictionaries
+- String Manipulation
+- File Handling
+- Exception Handling
+- Modular Programming
+
+### Bioinformatics
+
+- DNA Validation
+- Reverse Complement
+- GC Content
+- DNA Transcription
+- Genetic Code
+- DNA Translation
+- FASTA File Processing
+
+----------------------------------------------
+
+## 🎯 Future Improvements
+
+- ORF (Gene Finder)
+- Motif Finder
+- Sequence Alignment
+- Mini BLAST
+- Web Interface using Flask
+- AI-powered DNA Sequence Analysis
+----------------------------------------------
 
 ## 👨‍💻 Author
 
-Parth Hadiya
+**Parth Hadiya**
 
+Aspiring Bioinformatics & AI Engineer
+
+GitHub: https://github.com/001pa/DNA-Sequence-Toolkit
+----------------------------------------------
