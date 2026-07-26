@@ -191,7 +191,7 @@ def translate_dna(dna):
 def show_menu():
 
     print("=" * 30)
-    print("       DNA TOOLKIT")
+    print("     DNA Sequence Toolkit")
     print("=" * 30)
     print("1. Validate DNA")
     print("2. Reverse Complement")
