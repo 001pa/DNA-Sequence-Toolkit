@@ -39,7 +39,6 @@ DNA Sequence Toolkit/
 │
 ├── dna_toolkit.py
 ├── sample.fasta
-├── test_fasta.py
 └── README.md
 ```
 
