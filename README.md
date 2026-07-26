@@ -1,4 +1,4 @@
-# 🧬 DNA Toolkit v1.0
+# 🧬 DNA Sequence Toolkit
 
 A Python-based Bioinformatics toolkit for performing fundamental DNA sequence analysis. This project was built as part of my journey to become a Bioinformatics & AI Engineer.
 
@@ -35,7 +35,7 @@ DNA Toolkit is a command-line application that allows users to perform common DN
 ## 📁 Project Structure
 
 ```
-DNA-Toolkit/
+DNA Sequence Toolkit/
 │
 ├── dna_toolkit.py
 ├── sample.fasta
@@ -57,13 +57,13 @@ git clone https://github.com/001pa/DNA-Sequence-Toolkit
 ### Move into the project directory
 
 ```bash
-cd DNA-Toolkit
+cd DNA Sequence Toolkit
 ```
 
 ### Run the program
 
 ```bash
-python main.py
+python dna_toolkit.py
 ```
 
 ----------------------------------------------
@@ -71,7 +71,7 @@ python main.py
 ## 📷 Example
 
 ==============================
-       DNA TOOLKIT
+    DNA Sequence Toolkit
 ==============================
 1. Validate DNA
 2. Reverse Complement
@@ -118,17 +118,6 @@ Protein: MAF
 - Genetic Code
 - DNA Translation
 - FASTA File Processing
-
-----------------------------------------------
-
-## 🎯 Future Improvements
-
-- ORF (Gene Finder)
-- Motif Finder
-- Sequence Alignment
-- Mini BLAST
-- Web Interface using Flask
-- AI-powered DNA Sequence Analysis
 ----------------------------------------------
 
 ## 👨‍💻 Author
